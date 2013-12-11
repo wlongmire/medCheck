@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        
+
+        <title>MedCheck</title>
+    </head>
+
+    <body>
+        <div data-role="page" class="page" id="homePage">
+            <div data-role="content">
+                <img id="indicatorImg" src="img/home_indicator.png" alt="home_indicator.png">
+
+                <a data-role="button" data-theme="a" href="#editMenuPage" data-transition="slide">
+                    Edit Information
+                </a>
+                <a data-role="button" data-theme="a" href="#tookPage" data-transition="slide">
+                    Take Meds
+                </a>
+                <a data-role="button" data-theme="a" href="#progressPage">
+                    Check Progress
+                </a>
+            </div>
+        </div>
+        
+        <div data-role="page"  class="page" id="editMenuPage">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" data-icon="home" data-iconpos="notext" href="#homePage" class="ui-btn-right" data-transition="fade">
+                    Home
+                </a>
+                <h3>
+                    Edit Menu
+                </h3>
+            </div>    
+            
+            <div data-role="content">
+
+                 <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#basicInfoPage" data-transition="fade">
+                            <img src="img/basicInfoButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#basicInfoPage" data-transition="fade">
+                            <img src="img/reminderButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a href="#basicInfoPage" data-transition="fade">
+                            <img src="img/refillsButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#basicInfoPage" data-transition="fade">
+                            <img src="img/appointmentButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a href="#basicInfoPage" data-transition="fade">
+                            <img src="img/medicationButton.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+        <div data-role="page"  class="page" id="tookPage">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" href="#homePage" data-icon="home" data-iconpos="notext" class="ui-btn-right" data-transition="fade">
+                    Home
+                </a>
+                <h3>
+                    Took Options
+                </h3>
+            </div>    
+            
+            <div data-role="content">
+
+                 <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#progressPage" data-transition="fade">
+                            <img src="img/tookOptions/notTakenButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#progressPage" data-transition="fade">
+                            <img src="img/tookOptions/pillCamButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-a">
+                        <a href="#progressPage" data-transition="fade">
+                            <img src="img/tookOptions/snoozeButton.png" alt=""/>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#progressPage" data-transition="fade">
+                            <img src="img/tookOptions/tookButton.png" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+            
+        <div data-role="page"  class="page" id="progressPage">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" href="#homePage" data-icon="home" data-iconpos="notext" class="ui-btn-right" data-transition="fade">
+                    Home
+                </a>
+                <h3>
+                    Current Progress
+                </h3>
+            </div>
+
+            <div data-role="content">
+                <img src="img/progressPage.png" id="progressImg" alt="">
+                <a data-role="button" data-theme="a" href="#progressCalenderPage">
+                    Progress Calender
+                </a>
+            </div>
+        </div>
+
+        <div data-role="page"  class="page" id="progressCalenderPage">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" href="#homePage" data-icon="home" data-iconpos="notext" class="ui-btn-right" data-transition="fade">
+                    Home
+                </a>
+                <h3>
+                    Progress Calender
+                </h3>
+            </div>
+
+            <div data-role="content">
+                <img id="calenderImg" src="img/calenderImage.png" alt="">
+                <a data-role="button" data-theme="a" href="#progressPage">
+                    Progress Feedback
+                </a>
+            </div>
+        </div>
+
+        <div data-role="page"  class="page" id="basicInfoPage">
+            <div data-theme="a" data-role="header">
+                <a data-role="button" href="#homePage" data-icon="home" data-iconpos="notext" class="ui-btn-right" data-transition="fade">
+                    Home
+                </a>
+                <h3>
+                    Basic Information
+                </h3>
+            </div>
+
+            <div data-role="content">
+                
+                <input name="firstName" id="textinput1" placeholder="First Name" value=""
+                        type="text">
+            
+                <input name="lastName" id="textinput2" placeholder="Last Name" value=""
+                        type="text">
+                
+                <p>Diagnosis Date:
+                <input name="diagonsisDate" id="dateInput"  placeholder="" value="" type="date"></p>
+                
+                <input name="viralLoad" id="textinput4" placeholder="Viral Load" value=""
+                        type="number">
+
+                <input name="phoneNumber" id="textinput5" placeholder="Phone Number" value=""
+                        type="tel">
+
+                <input name="providerNumber" id="textinput6" placeholder="Provider Number"
+                        value="" type="tel">
+                
+                <a data-role="button" data-theme="a" href="#editMenuPage" data-transition="fade">
+                    Return To Menu
+                </a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.8.3.min.js"></script>
+
+        <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+
+        <script type="text/javascript" src="cordova-2.4.0.js"></script>
+        <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery/jquery-1.8.3.min.js"></script>    
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
